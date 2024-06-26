@@ -3,8 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainPageController;
+use App\Http\Controllers\ForumController;
 
 Route::get('/', [MainPageController::class, 'index'])->name('main_page');
+Route::get('/forums/{forum}', [ForumController::class, 'show'])->name('forums.show');
+
 
 
 Route::get('/dashboard', function () {

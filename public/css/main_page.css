@@ -122,6 +122,7 @@ body {
   width: 100%;
 }
 .question__forum {
+  display: inline-block;
   width: 100%;
   background-color: black;
   color: white;
