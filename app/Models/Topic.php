@@ -12,4 +12,8 @@ class Topic extends Model
     {
         return $this->belongsTo(Forum::class);
     }
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
 }

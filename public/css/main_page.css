@@ -190,3 +190,49 @@ main {
   font-size: 20px;
   padding-left: 60px;
 }
+/* ////////////////////////////////////////////////////////////////////////////////////// */
+/* discussion */
+.discussion__topic {
+  max-width: 1420px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: #FA8F8F;
+  padding: 20px 42px;
+  font-size: 17px;
+  border-radius: 15px;
+  margin-bottom: 33px;
+}
+.discussion__form {
+  max-width: 1420px;
+  margin: 0 auto;
+  border: 3px solid #000;
+  padding: 20px 44px;
+  display: flex;
+  flex-direction: column;
+}
+.discussion__answer {
+  font-size: 17px;
+  display: block;
+  margin-bottom: 20px;
+}
+.discussion__form-text {
+  width: 94%;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 100px;
+  align-self: flex-end;
+}
+.discussion__wrapper {
+  display: flex;
+  justify-content: flex-end
+}
+.discussion__btn {
+  display: block;
+  width: 100px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.discussion__btn:hover {
+  background-color: #333;
+}
