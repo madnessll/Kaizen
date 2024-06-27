@@ -9,11 +9,11 @@ body {
     flex-direction: column;
 }
 
-.header, .questions {
+.header, main {
     flex: 0 0 auto;
 }
 
-.questions {
+main {
     flex: 1 0 auto;
 }
 .header {
@@ -170,8 +170,23 @@ body {
 .footer__descr {
   width: 100%;
   background: black;
-  padding: 60px;
+  padding: 30px 60px;
   color: white;
-  font-size: 17px;
+  font-size: 21px;
   border-radius: 25px 25px 0 0;
+}
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* forum-topics */
+.forum-topics {
+  max-width: 1420px;
+  margin: 0 auto;
+}
+.forum-topics__title {
+  display: inline-block;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 42px;
+  font-size: 20px;
+  padding-left: 60px;
 }
