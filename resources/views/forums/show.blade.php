@@ -26,6 +26,9 @@
           </div>
         </div>
     @endforeach
+    <div class="pagination">
+        {{ $topics->links() }}
+    </div>
     @auth
         @if (Auth::user()->role === 'admin')
             <div class="forum-topics__form">
