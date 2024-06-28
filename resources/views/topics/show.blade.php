@@ -23,14 +23,18 @@
         <div class="replies__black"></div>
     @endforeach
     <div class="discussion__form">
-        <form action="{{ route('replies.store', $topic->id) }}" method="POST">
-            @csrf
-            <label class="discussion__answer" for="response">Ответить</label>
-            <textarea class="discussion__form-text" id="response" name="response"></textarea>
-            <div class="discussion__wrapper">
-                <button class="discussion__btn" type="submit">Отправить</button>
-            </div>
-        </form>
+        @auth
+            <form action="{{ route('replies.store', $topic->id) }}" method="POST">
+                @csrf
+                <label class="discussion__answer" for="response">Ответить</label>
+                <textarea class="discussion__form-text" id="response" name="response"></textarea>
+                <div class="discussion__wrapper">
+                    <button type="submit" class="discussion__btn">Отправить</button>
+                </div>
+            </form>
+        @else
+            <p>Пожалуйста, <a href="{{ route('login') }}">войдите в систему</a> или <a href="{{ route('register') }}">зарегистрируйтесь</a>, чтобы оставить комментарий.</p>
+        @endauth
     </div>
 </section>
 @endsection

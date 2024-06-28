@@ -12,17 +12,18 @@ class ReplyController extends Controller
     public function store(Request $request, Topic $topic)
     {
         $request->validate([
-            'response' => 'required|string|max:1000',
+            'response' => 'required|string',
         ]);
 
-        Reply::create([
-            'content' => $request->input('response'),
-            'topic_id' => $topic->id,
-            'user_id' => Auth::id(),
-        ]);
+        $reply = new Reply();
+        $reply->content = $request->response;
+        $reply->topic_id = $topic->id;
+        $reply->user_id = Auth::id();
+        $reply->save();
 
-        return redirect()->route('topics.show', $topic->id);
+        return redirect()->back()->with('success', 'Reply added successfully.');
     }
+
     public function destroy(Reply $reply)
     {
         if (Auth::id() !== $reply->user_id) {
@@ -30,6 +31,6 @@ class ReplyController extends Controller
         }
 
         $reply->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Reply deleted successfully.');
     }
 }
