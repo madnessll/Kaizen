@@ -4,6 +4,9 @@
 
 @section('content')
 <section class="discussion">
+    <div class="discussion__btn-back-wrapper">
+        <a href="{{ route('forums.show', $forum->id) }}" class="discussion__btn-back">Назад</a>
+    </div>
     <h1 class="discussion__topic">{{ $topic->title }}</h1>
     @foreach ($replies as $reply)
         <div class="discussion__replies replies">
