@@ -159,6 +159,16 @@ main {
   gap: 7px;
   font-size: 15px;
 }
+.question__descr-right-btn {
+  background-color: #c53131;
+  color: white;
+  transition: all 0.5s ease;
+  padding: 8px;
+  border-radius: 15px;
+}
+.question__descr-right-btn:hover {
+  background-color: #ff0000;
+}
 /* //////////////////////////////////////////////////////////////////////////////// */
 /* header */
 .footer {
@@ -180,6 +190,7 @@ main {
 .forum-topics {
   max-width: 1420px;
   margin: 0 auto;
+  margin-bottom: 60px;
 }
 .forum-topics__title {
   display: inline-block;

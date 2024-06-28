@@ -37,4 +37,13 @@ class TopicController extends Controller
 
         return redirect()->route('forums.show', $forum->id)->with('success', 'Новая тема успешно создана.');
     }
+    public function destroy(Topic $topic)
+    {
+        if (Auth::user()->role !== 'admin') {
+            return redirect()->back()->with('error', 'You are not authorized to delete this topic.');
+        }
+
+        $topic->delete();
+        return redirect()->route('forums.show', $topic->forum_id)->with('success', 'Topic deleted successfully.');
+    }
 }

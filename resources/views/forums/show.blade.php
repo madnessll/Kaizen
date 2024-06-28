@@ -14,16 +14,15 @@
               <a href="{{ route('topics.show', $topic->id) }}" class="question__descr-left-name">{{ $topic->title }}</a>
               <div class="question__descr-left-descr">{{ $topic->content }}</div>
             </div>
-            <!-- <div class="question__descr-right">
-              <div class="question__descr-right-img">
-                <img src="{{ asset('images/ava.png') }}" alt="ava">
-              </div>
-              <div class="question__descr-right-descr">
-                <div class="question__descr-right-last">Последний вопрос</div>
-                <div class="question__descr-right-author">Автор</div>
-                <div class="question__descr-right-time">Сегодня, 13:50</div>
-              </div>
-            </div> -->
+            @if (Auth::check() && Auth::user()->role === 'admin')
+                <div class="question__descr-right">
+                    <form action="{{ route('topics.destroy', $topic->id) }}" method="POST" style="display:inline">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="question__descr-right-btn">Удалить</button>
+                    </form>
+                </div>
+            @endif
           </div>
         </div>
     @endforeach
