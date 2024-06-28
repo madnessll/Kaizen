@@ -209,6 +209,8 @@ main {
   padding: 20px 44px;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .discussion__answer {
   font-size: 17px;
@@ -235,4 +237,35 @@ main {
 }
 .discussion__btn:hover {
   background-color: #333;
+}
+.discussion__replies {
+  max-width: 1420px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 13% 87%;
+  border: 3px solid black;
+  padding: 23px 42px;
+}
+.replies__wrapper {
+  border-right: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.replies__name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.replies__date {
+}
+.replies__comment {
+  line-height: 140%;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.replies__black {
+  background: black;
+  height: 50px;
+  width: 1420px;
+  margin: 0 auto;
 }

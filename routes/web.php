@@ -5,12 +5,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\TopicController;
+use App\Http\Controllers\ReplyController;
+
 
 
 Route::get('/', [MainPageController::class, 'index'])->name('main_page');
 Route::get('/forums/{forum}', [ForumController::class, 'show'])->name('forums.show');
 Route::get('/topics/{topic}', [TopicController::class, 'show'])->name('topics.show');
-
+Route::post('/topics/{topic}/replies', [ReplyController::class, 'store'])->name('replies.store');
 
 
 Route::get('/dashboard', function () {
