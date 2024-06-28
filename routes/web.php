@@ -13,6 +13,7 @@ Route::get('/', [MainPageController::class, 'index'])->name('main_page');
 Route::get('/forums/{forum}', [ForumController::class, 'show'])->name('forums.show');
 Route::get('/topics/{topic}', [TopicController::class, 'show'])->name('topics.show');
 Route::post('/topics/{topic}/replies', [ReplyController::class, 'store'])->name('replies.store');
+Route::delete('/replies/{reply}', [ReplyController::class, 'destroy'])->name('replies.destroy');
 
 
 Route::get('/dashboard', function () {

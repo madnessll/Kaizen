@@ -239,6 +239,7 @@ main {
   background-color: #333;
 }
 .discussion__replies {
+  position: relative;
   max-width: 1420px;
   margin: 0 auto;
   display: grid;
@@ -268,4 +269,16 @@ main {
   height: 50px;
   width: 1420px;
   margin: 0 auto;
+}
+.replies__delete-btn {
+  position: absolute;
+  right: 30px;
+  bottom: 15px;
+  background-color: #a52121;
+  color: white;
+  padding: 5px;
+  transition: background-color 0.5s ease;
+}
+.replies__delete-btn:hover {
+  background-color: #ff0000;
 }

@@ -23,4 +23,13 @@ class ReplyController extends Controller
 
         return redirect()->route('topics.show', $topic->id);
     }
+    public function destroy(Reply $reply)
+    {
+        if (Auth::id() !== $reply->user_id) {
+            return redirect()->back()->with('error', 'You are not authorized to delete this reply.');
+        }
+
+        $reply->delete();
+        return redirect()->back();
+    }
 }

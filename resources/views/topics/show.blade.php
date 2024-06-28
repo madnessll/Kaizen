@@ -12,6 +12,13 @@
                 <div class="replies__date">{{ $reply->created_at->format('H:i, d M Y') }}</div>
             </div>
             <div class="replies__comment">{{ $reply->content }}</div>
+            @if (Auth::id() === $reply->user_id)
+                <form action="{{ route('replies.destroy', $reply->id) }}" method="POST" style="display:inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="replies__delete-btn">Удалить</button>
+                </form>
+            @endif
         </div>
         <div class="replies__black"></div>
     @endforeach
