@@ -14,7 +14,7 @@
                         <a href="{{ route('topics.show', $topic->id) }}" class="question__descr-left-name">{{ $topic->title }}</a>
                         <div class="question__descr-left-descr">{{ $topic->content }}</div>
                     </div>
-                    <div class="question__descr-right">
+                    <!-- <div class="question__descr-right">
                         <div class="question__descr-right-img">
                             <img src="{{ asset('images/ava.png') }}" alt="ava">
                         </div>
@@ -23,7 +23,7 @@
                             <div class="question__descr-right-author">Автор</div>
                             <div class="question__descr-right-time">Сегодня, 13:50</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             @endforeach
         </div>

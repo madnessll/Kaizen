@@ -215,7 +215,7 @@ main {
   border-radius: 15px;
   margin-bottom: 33px;
 }
-.discussion__form {
+.discussion__form, .forum-topics__form {
   max-width: 1420px;
   margin: 0 auto;
   border: 3px solid #000;
@@ -225,30 +225,30 @@ main {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.discussion__answer {
+.discussion__answer, .forum-topics__answer {
   font-size: 17px;
   display: block;
   margin-bottom: 20px;
 }
-.discussion__form-text {
+.discussion__form-text, .forum-topics__form-text {
   width: 94%;
   padding: 10px;
   margin-bottom: 20px;
   height: 100px;
   align-self: flex-end;
 }
-.discussion__wrapper {
+.discussion__wrapper, .forum-topics__form-wrapper {
   display: flex;
   justify-content: flex-end
 }
-.discussion__btn {
+.discussion__btn, .forum-topics__form-btn {
   display: block;
   width: 100px;
   padding: 10px;
   background-color: black;
   color: white;
 }
-.discussion__btn:hover {
+.discussion__btn:hover, .forum-topics__form-btn:hover {
   background-color: #333;
 }
 .discussion__btn-back-wrapper {
