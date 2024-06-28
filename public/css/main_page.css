@@ -189,6 +189,19 @@ main {
   padding: 42px;
   font-size: 20px;
   padding-left: 60px;
+  margin-top: 30px;
+}
+
+.forum-topics__btn-back {
+  margin-top: -10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.forum-topics__btn-back:hover {
+  background-color: #fa8f8f;
 }
 /* ////////////////////////////////////////////////////////////////////////////////////// */
 /* discussion */
