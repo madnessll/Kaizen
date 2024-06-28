@@ -22,6 +22,9 @@
         </div>
         <div class="replies__black"></div>
     @endforeach
+    <div class="pagination">
+        {{ $replies->links() }}
+    </div>
     <div class="discussion__form">
         @auth
             <form action="{{ route('replies.store', $topic->id) }}" method="POST">

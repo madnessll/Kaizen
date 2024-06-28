@@ -245,7 +245,7 @@ main {
   display: grid;
   grid-template-columns: 13% 87%;
   border: 3px solid black;
-  padding: 23px 42px;
+  padding: 42px 42px;
 }
 .replies__wrapper {
   border-right: 3px solid black;
@@ -256,8 +256,7 @@ main {
 .replies__name {
   font-size: 20px;
   font-weight: bold;
-}
-.replies__date {
+  margin-bottom: 20px;
 }
 .replies__comment {
   line-height: 140%;
@@ -282,3 +281,11 @@ main {
 .replies__delete-btn:hover {
   background-color: #ff0000;
 }
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////  */
+/* pagination */
+.pagination {
+  max-width: 1420px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
