@@ -44,6 +44,6 @@ class TopicController extends Controller
         }
 
         $topic->delete();
-        return redirect()->route('forums.show', $topic->forum_id)->with('success', 'Topic deleted successfully.');
+        return redirect()->back()->with('success', 'Тема успешно удалена.');
     }
 }
