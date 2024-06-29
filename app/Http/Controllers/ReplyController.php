@@ -21,7 +21,12 @@ class ReplyController extends Controller
         $reply->user_id = Auth::id();
         $reply->save();
 
-        return redirect()->back()->with('success', 'Reply added successfully.');
+         $repliesCount = $topic->replies()->count();
+        $repliesPerPage = 10; // Adjust based on your pagination settings
+        $lastPage = ceil($repliesCount / $repliesPerPage);
+
+        return redirect()->route('topics.show', ['topic' => $topic->id, 'page' => $lastPage])
+                         ->with('success', 'Комментарий успешно добавлен.');
     }
 
     public function destroy(Reply $reply)

@@ -7,12 +7,14 @@ use App\Models\Forum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class TopicController extends Controller
 {
-    public function show(Topic $topic)
+    public function show(Topic $topic, Request $request)
     {
         $forum = $topic->forum;
-        $replies = $topic->replies()->paginate(10); 
+        $page = $request->get('page', 1); // Default to page 1 if not specified
+        $replies = $topic->replies()->paginate(10, ['*'], 'page', $page);
 
         // Return the view with the topic and replies
         return view('topics.show', compact('topic', 'replies', 'forum'));
