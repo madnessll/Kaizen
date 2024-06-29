@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Models\Forum;
-use App\Models\Topic;
 
 class MainPageController extends Controller
 {

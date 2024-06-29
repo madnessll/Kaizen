@@ -14,7 +14,6 @@ return new class extends Migration
          Schema::table('topics', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id')->nullable();
 
-            // If you want to add a foreign key constraint
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

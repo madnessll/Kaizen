@@ -22,7 +22,7 @@ class ReplyController extends Controller
         $reply->save();
 
          $repliesCount = $topic->replies()->count();
-        $repliesPerPage = 10; // Adjust based on your pagination settings
+        $repliesPerPage = 10; 
         $lastPage = ceil($repliesCount / $repliesPerPage);
 
         return redirect()->route('topics.show', ['topic' => $topic->id, 'page' => $lastPage])

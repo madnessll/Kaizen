@@ -22,8 +22,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/topics/{topic}/replies', [ReplyController::class, 'store'])->name('replies.store');
     Route::delete('/replies/{reply}', [ReplyController::class, 'destroy'])->name('replies.destroy');
 });
-// Route::post('/topics/{topic}/replies', [ReplyController::class, 'store'])->name('replies.store');
-// Route::delete('/replies/{reply}', [ReplyController::class, 'destroy'])->name('replies.destroy');
 
 
 Route::get('/dashboard', function () {

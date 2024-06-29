@@ -16,7 +16,7 @@ class TopicFactory extends Factory
             'forum_id' => Forum::factory(),
             'title' => $this->faker->sentence,
             'content' => $this->faker->paragraph,
-            'user_id' => 1, // Замените на ID существующего пользователя или создайте пользователей в сидере
+            'user_id' => 1, 
         ];
     }
 }

@@ -13,10 +13,9 @@ class TopicController extends Controller
     public function show(Topic $topic, Request $request)
     {
         $forum = $topic->forum;
-        $page = $request->get('page', 1); // Default to page 1 if not specified
+        $page = $request->get('page', 1);
         $replies = $topic->replies()->paginate(10, ['*'], 'page', $page);
 
-        // Return the view with the topic and replies
         return view('topics.show', compact('topic', 'replies', 'forum'));
     }
     public function store(Request $request, Forum $forum)
