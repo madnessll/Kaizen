@@ -172,6 +172,11 @@ main {
 .questions__pagination {
   padding-bottom: 50px;
 }
+.questions__form-text {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 /* //////////////////////////////////////////////////////////////////////////////// */
 /* header */
 .footer {
@@ -229,7 +234,7 @@ main {
   border-radius: 15px;
   margin-bottom: 33px;
 }
-.discussion__form, .forum-topics__form {
+.discussion__form, .forum-topics__form, .questions__form {
   max-width: 1420px;
   margin: 0 auto;
   border: 3px solid #000;
@@ -239,7 +244,7 @@ main {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.discussion__answer, .forum-topics__answer {
+.discussion__answer, .forum-topics__answer, .questions__answer {
   font-size: 17px;
   display: block;
   margin-bottom: 20px;
@@ -251,7 +256,7 @@ main {
   height: 100px;
   align-self: flex-end;
 }
-.discussion__wrapper, .forum-topics__form-wrapper {
+.discussion__wrapper, .forum-topics__form-wrapper, .questions__form-wrapper {
   display: flex;
   justify-content: flex-end
 }
