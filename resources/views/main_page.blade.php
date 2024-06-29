@@ -23,4 +23,7 @@
         </div>
     @endforeach
 </section>
+<div class="pagination questions__pagination">
+    {{ $forums->links() }} <!-- Вывод пагинационных ссылок для форумов -->
+</div>
 @endsection

@@ -169,6 +169,9 @@ main {
 .question__descr-right-btn:hover {
   background-color: #ff0000;
 }
+.questions__pagination {
+  padding-bottom: 50px;
+}
 /* //////////////////////////////////////////////////////////////////////////////// */
 /* header */
 .footer {
