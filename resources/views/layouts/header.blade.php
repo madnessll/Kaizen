@@ -5,13 +5,6 @@
                 <a href="{{ route('main_page') }}" class="header__link">Kaizen</a>
             </h1>
             <div class="header__right">
-                <div class="header__right-form">
-                    <input type="text" class="header__right-input" placeholder="Искать">
-                    <button class="header__right-form-btn">
-                        <div class="header__right-input-bg"></div>
-                        <img src="{{ asset('images/search.svg') }}" alt="search" class="header__right-search">
-                    </button>
-                </div>
                 <div class="header__btns">
                     @auth
                         <div class="header__user">
