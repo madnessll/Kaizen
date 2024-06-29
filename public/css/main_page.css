@@ -138,6 +138,7 @@ main {
   justify-content: space-between;
   align-items: center;
   border: 3px solid black;
+  position: relative;
 }
 .question__descr-left-name {
   font-size: 23px;
@@ -161,6 +162,8 @@ main {
   font-size: 15px;
 }
 .question__descr-right-btn, .question__delete-btn-descr {
+  position: relative;
+  z-index: 10;
   background-color: #c53131;
   color: white;
   transition: all 0.5s ease;
@@ -190,6 +193,11 @@ main {
 }
 .question__delete-btn:hover {
   background-color: red;
+}
+.question__descr-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 /* //////////////////////////////////////////////////////////////////////////////// */
 /* header */

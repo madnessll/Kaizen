@@ -35,6 +35,7 @@
                             </form>
                         @endif
                     @endauth
+                    <a href="{{ route('topics.show', $topic->id) }}" class="question__descr-link"></a>
                 </div>
                 @php $count++; @endphp
             @endforeach

@@ -23,6 +23,7 @@
                     </form>
                 </div>
             @endif
+            <a href="{{ route('topics.show', $topic->id) }}" class="question__descr-link"></a>
           </div>
         </div>
     @endforeach
