@@ -9,7 +9,7 @@
             <a href="{{ route('forums.show', $forum->id) }}" class="question__forum">{{ $forum->name }}</a>
             @php $count = 0; @endphp
             @foreach ($forum->topics as $topic)
-                @if ($count >= 10)
+                @if ($count >= 5)
                     @break
                 @endif
                 <div class="question__descr">
