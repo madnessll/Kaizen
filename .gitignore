@@ -19,3 +19,4 @@ yarn-error.log
 /.vscode
 random.html
 random.blade.php
+public_html
