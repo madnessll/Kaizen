@@ -12,6 +12,7 @@ use App\Http\Controllers\ReplyController;
 Route::get('/', [MainPageController::class, 'index'])->name('main_page');
 Route::get('/forums/{forum}', [ForumController::class, 'show'])->name('forums.show');
 Route::post('/forums', [ForumController::class, 'store'])->name('forums.store');
+Route::delete('/forums/{forum}', [ForumController::class, 'destroy'])->name('forums.destroy');
 Route::get('/topics/{topic}', [TopicController::class, 'show'])->name('topics.show');
 Route::delete('/topics/{topic}', [TopicController::class, 'destroy'])->name('topics.destroy');
 Route::post('/forums/{forum}/topics', [TopicController::class, 'store'])->name('topics.store');

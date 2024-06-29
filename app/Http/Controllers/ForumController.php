@@ -31,4 +31,13 @@ class ForumController extends Controller
 
         return redirect()->route('main_page')->with('success', 'Новый форум успешно создан.');
     }
+    public function destroy(Forum $forum)
+    {
+        if (Auth::user()->role !== 'admin') {
+            return redirect()->back()->with('error', 'Вы не имеете права удалять форумы.');
+        }
+
+        $forum->delete();
+        return redirect()->route('main_page')->with('success', 'Форум успешно удален.');
+    }
 }
