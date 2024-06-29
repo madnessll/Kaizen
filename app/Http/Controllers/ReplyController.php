@@ -26,7 +26,7 @@ class ReplyController extends Controller
 
     public function destroy(Reply $reply)
     {
-        if (Auth::id() !== $reply->user_id) {
+        if (Auth::user()->role !== 'admin' && Auth::id() !== $reply->user_id) {
             return redirect()->back()->with('error', 'You are not authorized to delete this reply.');
         }
 
